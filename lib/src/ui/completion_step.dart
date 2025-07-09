@@ -70,7 +70,7 @@ class RPUICompletionStepState extends State<RPUICompletionStep>
             ButtonTheme(
               buttonColor: Theme.of(context).extension<RPColors>()!.primary,
               minWidth: 150,
-              child: TextButton(
+              child: OutlinedButton(
                 onPressed: () {
                   blocTask.sendStatus(RPStepStatus.Finished);
                 },
