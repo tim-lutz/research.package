@@ -1,3 +1,7 @@
+## 2.1.1
+
+* minor visual updates
+
 ## 2.1.0
 
 * updating RPColors theme to act as carp_styles_package temporarily
