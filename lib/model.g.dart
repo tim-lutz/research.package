@@ -32,6 +32,7 @@ const _$RPQuestionTypeEnumMap = {
   RPQuestionType.Date: 'Date',
   RPQuestionType.Duration: 'Duration',
   RPQuestionType.ImageChoice: 'ImageChoice',
+  RPQuestionType.StarChoice: 'StarChoice',
   RPQuestionType.Double: 'Double',
   RPQuestionType.Form: 'Form',
 };

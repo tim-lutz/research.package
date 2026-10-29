@@ -13,7 +13,7 @@ class RPStarChoiceAnswerFormat extends RPAnswerFormat {
   RPStarChoiceAnswerFormat({required this.choices}) : super();
 
   @override
-  RPQuestionType get questionType => RPQuestionType.ImageChoice;
+  RPQuestionType get questionType => RPQuestionType.StarChoice;
 
   @override
   Function get fromJsonFunction => _$RPStarChoiceAnswerFormatFromJson;
@@ -30,13 +30,7 @@ class RPStarChoice extends Serializable {
   /// The image portraying the choice.
   String starActiveUrl;
   String starNotActiveUrl;
-
-  /// The key of the image if this is to be loaded from the images
-  /// in the assets on the phone.
-  /// Specify either the [image] or the [key].
-  String? keyActive;
-  String? keyNotActive;
-
+  
   /// The value of the choice. Can be any type but MUST be serializable if this feature is used.
   dynamic value;
 
@@ -46,8 +40,6 @@ class RPStarChoice extends Serializable {
   RPStarChoice({
     required this.starActiveUrl,
     required this.starNotActiveUrl,
-    this.keyActive,
-    this.keyNotActive,
     this.value,
     required this.description,
   }) : super();

@@ -185,6 +185,18 @@ class RPUIFormStepState extends State<RPUIFormStep> {
 
           checkReadyToProceed();
         });
+      case const (RPStarChoiceAnswerFormat):
+        return RPUIImageChoiceQuestionBody(
+            (answerFormat as RPStarChoiceAnswerFormat), (result) {
+          RPStepResult tempResult = stepResult?.results[id] as RPStepResult;
+          tempResult.questionTitle = widget.formStep.questions
+              .where((step) => step.identifier == id)
+              .first
+              .title;
+          tempResult.setResult(result);
+
+          checkReadyToProceed();
+        });
       case const (RPDateTimeAnswerFormat):
         return RPUIDateTimeQuestionBody(
             (answerFormat as RPDateTimeAnswerFormat), (result) {
